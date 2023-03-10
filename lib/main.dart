@@ -3,7 +3,7 @@ import 'package:notes_create/views/home_view.dart';
 
 void main() {
   runApp(
-    NotesApp(),
+    const NotesApp(),
   );
 }
 
@@ -18,7 +18,7 @@ class NotesApp extends StatelessWidget {
         brightness: Brightness.dark,
         fontFamily: 'Tajawal',
       ),
-      home: NotesHomeView(),
+      home: const NotesHomeView(),
     );
   }
 }
