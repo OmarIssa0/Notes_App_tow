@@ -8,22 +8,25 @@ class NotesHomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
-      child: Column(
-        children: [
-          const CustomAppBar(
-            title: 'مذكرات',
-            icon: Icons.search,
-          ),
-          Container(
-            decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 10, 9, 9),
-              borderRadius: BorderRadius.circular(16),
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24),
+        child: Column(
+          children: [
+            const CustomAppBar(
+              title: 'مذكرات',
+              icon: Icons.search,
             ),
-            child: const NotesViewItem(),
-          ),
-        ],
+            Container(
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 10, 9, 9),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: const NotesViewItem(),
+            ),
+          ],
+        ),
       ),
     );
   }
