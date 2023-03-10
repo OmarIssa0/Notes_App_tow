@@ -14,6 +14,9 @@ class NotesHomeView extends StatelessWidget {
         backgroundColor: const Color(0xffD33F49),
         onPressed: () {
           showModalBottomSheet(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
             context: context,
             builder: (context) {
               return const ShowButtonSheet();

@@ -21,7 +21,13 @@ class CustomTextFormField extends StatelessWidget {
     return TextFormField(
       onChanged: onChanged,
       onSaved: onSaved,
-      validator: (value) {},
+      validator: (value) {
+        if (value?.isEmpty ?? true) {
+          return 'رجاء املا الحقول';
+        } else {
+          return null;
+        }
+      },
       maxLines: maxLines,
       cursorColor: const Color(0xffD33F49),
       decoration: InputDecoration(
