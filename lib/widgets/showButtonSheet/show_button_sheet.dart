@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../custom_text_filed.dart';
+import 'custom_button.dart';
 
 class ShowButtonSheet extends StatelessWidget {
   const ShowButtonSheet({super.key});
@@ -26,9 +27,19 @@ class ShowButtonSheet extends StatelessWidget {
             label: 'الشرح',
             maxLines: 5,
           ),
-          
+          SizedBox(
+            height: 25,
+          ),
+          Spacer(
+            flex: 2,
+          ),
+          CustomButton(),
+          Spacer(
+            flex: 1,
+          )
         ],
       ),
     );
   }
 }
+
