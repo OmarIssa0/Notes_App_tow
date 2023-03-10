@@ -14,6 +14,7 @@ class NotesHomeView extends StatelessWidget {
         backgroundColor: const Color(0xffD33F49),
         onPressed: () {
           showModalBottomSheet(
+            isScrollControlled: true,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16),
             ),

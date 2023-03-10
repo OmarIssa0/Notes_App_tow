@@ -11,19 +11,28 @@ class NotesHomeViewBody extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(
           children: [
             const CustomAppBar(
               title: 'مذكرات',
-              icon: Icons.search,
+              icon: Icons.menu,
             ),
-            Container(
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 10, 9, 9),
-                borderRadius: BorderRadius.circular(16),
+            Expanded(
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 4),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 10, 9, 9),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: const NotesViewItem(),
+                    ),
+                  );
+                },
               ),
-              child: const NotesViewItem(),
             ),
           ],
         ),
