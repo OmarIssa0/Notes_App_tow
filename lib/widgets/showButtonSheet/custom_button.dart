@@ -6,19 +6,18 @@ import 'text_button.dart';
 class CustomButton extends StatelessWidget {
   const CustomButton({super.key, this.onTap});
 
-
-final Function()? onTap;
+  final Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        TextButton(
+        CustomTextButton(
           text: 'الغاء',
           onTap: () {
             Navigator.pop(context);
           },
         ),
-        TextButton(
+        CustomTextButton(
           text: 'اضافة',
           color: const Color(0xffD33F49),
           onTap: onTap,
