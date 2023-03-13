@@ -29,6 +29,8 @@ class NotesViewItem extends StatelessWidget {
               padding: EdgeInsets.only(top: 24, left: 12, bottom: 12),
               child: Text(
                 'ملاحظة',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(fontSize: 24),
               ),
             ),
@@ -36,6 +38,8 @@ class NotesViewItem extends StatelessWidget {
               padding: const EdgeInsets.only(left: 12, bottom: 12),
               child: Text(
                 'عمر جمال عيسى انا مطور تطيبقات',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontSize: 14,
                   color: Colors.white.withOpacity(.4),
@@ -59,7 +63,7 @@ class NotesViewItem extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 9),
             child: Text(
               '10-03-2023',
               style: TextStyle(

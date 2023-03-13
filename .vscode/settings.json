@@ -21,5 +21,6 @@
         "مذكرات",
         "مطور",
         "ملاحظة"
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

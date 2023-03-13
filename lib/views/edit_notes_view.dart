@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:notes_create/widgets/appBar/custom_app_bar.dart';
 import 'package:notes_create/widgets/custom_text_filed.dart';
-import 'package:notes_create/widgets/showButtonSheet/text_button.dart';
 
 class EditNotesView extends StatelessWidget {
   const EditNotesView({super.key});
@@ -18,38 +15,49 @@ class EditNotesView extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: Container(
-                height: 40,
-                width: 40,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(9),
-                  color: Colors.grey[800],
-                ),
-                child: const Icon(
-                  Icons.keyboard_arrow_left,
-                  size: 30,
-                  color: Colors.white,
+            Expanded(
+              flex: 0,
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Container(
+                  height: 40,
+                  width: 40,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(9),
+                    color: Colors.grey[800],
+                  ),
+                  child: const Icon(
+                    Icons.keyboard_arrow_left,
+                    size: 30,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
             const SizedBox(
               height: 75,
             ),
-            const CustomTextFormField(
-              hint: 'العنوان الرئيسي',
-              label: 'العنوان',
-            ),
-            const SizedBox(
-              height: 25,
-            ),
-            const CustomTextFormField(
-              hint: 'الملخص',
-              label: 'الشرح',
-              maxLines: 5,
+            Expanded(
+              flex: 8,
+              child: Column(
+                children: const [
+                  CustomTextFormField(
+                    hint: 'العنوان الرئيسي',
+                    label: 'العنوان',
+                    maxLines: 3,
+                  ),
+                  SizedBox(
+                    height: 25,
+                  ),
+                  CustomTextFormField(
+                    hint: 'الملخص',
+                    label: 'الشرح',
+                    maxLines: 12,
+                  ),
+                ],
+              ),
             ),
             const SizedBox(
               height: 55,
@@ -65,7 +73,7 @@ class EditNotesView extends StatelessWidget {
                 child: Text("تعديل النص"),
               ),
             ),
-            const Spacer(),
+            const Spacer(flex: 4),
           ],
         ),
       ),
