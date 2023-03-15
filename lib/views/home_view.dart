@@ -11,7 +11,8 @@ class NotesHomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color(0xffD33F49),
+        // backgroundColor: const Color(0xffD33F49),
+        backgroundColor: Colors.white.withAlpha(10),
         onPressed: () {
           showModalBottomSheet(
             isScrollControlled: true,

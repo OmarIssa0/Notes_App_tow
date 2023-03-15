@@ -25,7 +25,8 @@ class NotesHomeViewBody extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 4),
                     child: Container(
                       decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 10, 9, 9),
+                        // color: const Color.fromARGB(255, 10, 9, 9),
+                        color: Colors.black,
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child: const NotesViewItem(),
